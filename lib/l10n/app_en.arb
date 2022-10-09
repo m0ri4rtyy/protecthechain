@@ -1,0 +1,19 @@
+{
+    "appTitle": "Chain Protector",
+    "emailInput": "Email Adress",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "loginbutton": "Log in",
+    "loginwithG": "Log in with Google",
+    "noAccount" : "Don't you have an account?",
+    "registerText" : "Register!",
+    "yesAccount" : "You already have an account?",
+    "loginText": "Login!",
+    "emptymail": "Please provide an email adress",
+    "invalidmail": "Please provide a valid email adress",
+    "emptypass": "Please provide your password",
+    "shortpass": "Your password must have 6 chars at least",
+    "passnotmatch": "Passwords doesn't match. Please retype passwords.",
+    "mailinuse": "E-mail adress is already in use."
+   
+}

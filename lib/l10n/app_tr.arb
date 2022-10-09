@@ -1,0 +1,18 @@
+{
+    "appTitle": "Zinciri Kırma",
+    "emailInput": "E-mail adresiniz",
+    "password": "Şifreniz",
+    "confirmPassword": "Şifrenizi doğrulayın",
+    "loginbutton": "Giriş yap",
+    "loginwithG": "Google ile giriş yap",
+    "noAccount" : "Hesabınız yok mu?",
+    "registerText" : "Kayıt olun!",
+    "yesAccount" : "Hesabınız var mı?",
+    "loginText": "Giriş yapın!",
+    "emptymail": "Lütfen email adresinizi girin.",
+    "invalidmail": "Lütfen geçerli bir email adresi girin.",
+    "emptypass": "Lütfen şifrenizi yazın.",
+    "shortpass": "Şifreniz en az altı karakterden oluşmalı",
+    "passnotmatch": "Girdiğiniz şifreler uyuşmuyor.",
+    "mailinuse": "E-mail adresi kullanımda."
+}

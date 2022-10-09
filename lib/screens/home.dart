@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:protecthechain/widgets/loginContainer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -9,30 +11,29 @@ class HomePage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        SizedBox(height: MediaQuery.of(context).size.height * 0.2),
         // Login Container
-        Center(
-          child: Container(
-            width: MediaQuery.of(context).size.width * 0.9,
-            decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      offset: Offset.zero,
-                      blurRadius: 30,
-                      spreadRadius: 0,
-                      blurStyle: BlurStyle.outer)
-                ],
-                gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Colors.blue.withOpacity(0.5),
-                      Colors.blue.withOpacity(0.5),
-                    ]),
-                borderRadius: BorderRadius.all(Radius.circular(10))),
-            height: 250,
-          ),
+        Stack(
+          fit: StackFit.loose,
+          children: [
+            Text(
+              AppLocalizations.of(context)!.appTitle,
+              style: const TextStyle(fontSize: 30, fontFamily: 'Alata'),
+            ),
+          ],
         ),
+
+        const Center(
+          child: LoginContainer(),
+        ),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.15),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Image.asset('assets/images/bottom.png',
+                height: MediaQuery.of(context).size.height * 0.2),
+          ],
+        )
       ],
     );
   }
