@@ -63,7 +63,7 @@ class LoginFields extends StatelessWidget {
                                 if (loginPasswordController.text.length >= 6) {
                                   // Do Login
 
-                                  doLogin();
+                                  doLogin(context);
                                 } else {
                                   AnimatedSnackBar.material(
                                     AppLocalizations.of(context)!.shortpass,
@@ -162,16 +162,22 @@ class LoginFields extends StatelessWidget {
     );
   }
 
-  void doLogin() async {
+  void doLogin(context) async {
     try {
       final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: loginEmailController.text,
           password: loginPasswordController.text);
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
-        print('No user found for that email.');
+        AnimatedSnackBar.material(
+          AppLocalizations.of(context)!.wrongmail,
+          type: AnimatedSnackBarType.error,
+        ).show(context);
       } else if (e.code == 'wrong-password') {
-        print('Wrong password provided for that user.');
+        AnimatedSnackBar.material(
+          AppLocalizations.of(context)!.wrongpass,
+          type: AnimatedSnackBarType.error,
+        ).show(context);
       }
     }
   }

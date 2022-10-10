@@ -14,6 +14,8 @@
     "emptypass": "Please provide your password",
     "shortpass": "Your password must have 6 chars at least",
     "passnotmatch": "Passwords doesn't match. Please retype passwords.",
-    "mailinuse": "E-mail adress is already in use."
+    "mailinuse": "E-mail adress is already in use.",
+    "wrongmail": "We haven't any accounts with this email adress.",
+    "wrongpass": "Wrong account details please try again."
    
 }

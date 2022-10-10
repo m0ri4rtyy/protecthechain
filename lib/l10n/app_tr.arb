@@ -14,5 +14,7 @@
     "emptypass": "Lütfen şifrenizi yazın.",
     "shortpass": "Şifreniz en az altı karakterden oluşmalı",
     "passnotmatch": "Girdiğiniz şifreler uyuşmuyor.",
-    "mailinuse": "E-mail adresi kullanımda."
+    "mailinuse": "E-mail adresi kullanımda.",
+    "wrongmail": "Bu email adresiyle kayıtlı kullanıcı bulunmuyor.",
+    "wrongpass": "Giriş bilgileriniz hatalı. Lütfen tekrar deneyin."
 }

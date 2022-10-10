@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter/services.dart';
+import 'package:protecthechain/screens/chainboard.dart';
 import 'package:protecthechain/screens/home.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -43,13 +45,20 @@ class MainApp extends StatelessWidget {
                     statusBarIconBrightness: Brightness.dark,
                     statusBarColor: Colors.white),
               )),
-          body: SingleChildScrollView(
-            child: AnimationConfiguration.synchronized(
-                child: FadeInAnimation(
-              duration: Duration(seconds: 2),
-              child: HomePage(),
-            )),
-          )),
+          body: StreamBuilder<User?>(
+              stream: FirebaseAuth.instance.authStateChanges(),
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  return ChainBoard();
+                }
+                return SingleChildScrollView(
+                  child: AnimationConfiguration.synchronized(
+                      child: FadeInAnimation(
+                    duration: Duration(seconds: 2),
+                    child: HomePage(),
+                  )),
+                );
+              })),
     );
   }
 }
