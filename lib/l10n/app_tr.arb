@@ -16,5 +16,6 @@
     "passnotmatch": "Girdiğiniz şifreler uyuşmuyor.",
     "mailinuse": "E-mail adresi kullanımda.",
     "wrongmail": "Bu email adresiyle kayıtlı kullanıcı bulunmuyor.",
-    "wrongpass": "Giriş bilgileriniz hatalı. Lütfen tekrar deneyin."
+    "wrongpass": "Giriş bilgileriniz hatalı. Lütfen tekrar deneyin.",
+    "yourchains": "Oluşturduğun Zincirler"
 }
